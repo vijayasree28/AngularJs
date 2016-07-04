@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Currency</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="costCtrl">
+
+<h1>Price: {{ price | currency:"&#8377" }}</h1>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price = 22228;
+});
+</script>
+
+
+</body>
+</html>
